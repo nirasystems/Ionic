@@ -1,0 +1,229 @@
+.scan-card .ion-card.card{
+    border-radius: 5px;
+}
+
+.scan-card ion-card ion-item ion-label {
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 10px;
+}
+
+.scan-card ion-card ion-item ion-label h2{
+    color: #c582ea !important;
+}
+
+.scan-card .list .item{
+    display: flex;
+    height: 50px;
+    border: 1px solid #e7e7e7;
+}
+
+.scan-card .list .item label{
+    display: flex;
+    flex: 1 0;
+    width: 100%;
+    margin-left: 1px;
+}
+
+.scan-card .list .item button{
+    font-size: 30px;
+    width: 60px;
+    background-color: #f6f9fc;
+    color: #888888;
+    border:0;
+    border-left: 1px solid #e7e7e7;
+}
+
+.scan-card .list .item label input[type="text"]{
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f6f9fc;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "SF-Pro-Display";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.59px;
+    width: 100%;
+    box-shadow: none;
+    border: 0;
+}
+
+ion-card-content .list:first-child{
+    margin-bottom: 15px;
+}
+
+ion-card-content .list button{
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+ion-card-content .list button.red-btn{
+    color: #fb8c7e;
+}
+
+ion-card-content .list button.green-btn{
+    color: #9edf82;
+}
+
+ion-card-content .list button .button-inner ion-icon{
+    font-size: 38px;
+}
+
+.sign-in-card{
+    background-color: #fbfbfb;
+}
+
+.red-card{
+    color: #7e7e7e;
+    padding-bottom: 0px;
+    font-size: 17px;
+}
+
+.red-card span{
+    font-size: 14px;
+    color: #fb8c7e;
+}
+
+.green-card{
+    color: #9edf82;
+    padding-top: 3px;
+    font-size: 14px;
+}
+
+.control-btns{
+    display: flex;
+    justify-content: flex-start;
+    margin-top:8px;
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee;
+}
+
+.control-btns .button{
+    width: 50%;
+    font-size: 14px;
+    padding: 11px 0px;
+    border-radius: 5px;
+}
+
+.red-card-with-txt{
+    font-size: 16px;
+    color: #fb8c7e;
+}
+
+.green-card-with-txt{
+    font-size: 16px;
+    color: #9edf82;
+}
+
+.text-msg{
+    font-size: 14px;
+    color: #7e7e7e;
+}
+
+.control-btns .button:nth-child(1) {
+    color: #fb978a;
+    background-color: #ffffff;
+    border: 1px solid #fb9d90;
+    margin-right: 10px;
+}
+
+.control-btns .button:nth-child(2) {
+    color: #9edf82;
+    background-color: #ffffff;
+    border: 1px solid #9edf82;
+}
+
+ion-footer ion-card.card{
+    border-radius: 5px;
+}
+
+ion-footer .button-bar button {
+    width:100%;
+    font-size: 17px;
+    padding: 16px 0px; 
+    font-weight: 600;
+}
+
+ion-footer .button-bar button:nth-child(1){
+    color: #ffffff;
+    background-color: #8ee269;
+    border: 1px solid #8ee269;
+    margin-right: -1px;
+}
+
+ion-footer .button-bar button:nth-child(2){
+    color: #ffffff;
+    background-color: #f0513c;
+    border: 1px solid #f0513c;
+}
+
+ion-footer .button-bar a.button{
+    width:100%;
+    height: 44px;
+    padding: 15px 0px;
+}
+
+ion-footer .button-bar a.button:nth-child(1){
+    color: #ffffff;
+    background-color: #8ee269;
+    border: 1px solid #8ee269;
+    margin-right: -1px;
+}
+
+ion-footer .button-bar a.button:nth-child(2){
+    color: #ffffff;
+    background-color: #f0513c;
+    border: 1px solid #f0513c;
+}
+
+ion-footer ion-toolbar{
+    padding: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    background-color: #ffffff;
+    border: 0;
+    box-shadow: none;
+}
+
+ion-footer ion-toolbar .toolbar-background{
+    background: #ffffff;
+}
+
+.last-sign-in{
+    color:#9edf82;
+}
+
+.last-sign-out{
+    color:#ea6f5f;
+}
+
+.scan-your-card-text-red {
+    color: #ea6f5f;
+}
+
+.scan-your-card-text-green {
+    color: #9edf82;
+}
+
+.scan-your-card-green {
+    font-size: 18px;
+    color: #9edf82;
+}
+
+.scan-your-card-red {
+    font-size: 18px;
+    color: #fb8c7e;
+}
+
+.stop-watch {
+    font-size: 26px;
+    margin-bottom: -10px;
+    color: #9edf82;
+    font-family: digital-7;
+    padding-top: 5px;
+}

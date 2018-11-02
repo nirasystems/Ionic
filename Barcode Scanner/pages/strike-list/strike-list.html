@@ -1,0 +1,33 @@
+<!--
+  Generated template for the StrikeListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>
+            StrikeList
+            <ion-fab right>
+            <button (click)="logoutButtonTapped();">
+                <ion-icon name="log-out"></ion-icon>
+            </button>
+        </ion-fab>
+        </ion-title>
+        
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let item of viewModels; index as i" [attr.data-index]="i" (click)="strikeListItemButtonTapped(i);">
+
+        <ion-item>
+            <h2>{{item.name}}</h2>
+            <p>{{item.date}}</p>
+        </ion-item>
+    </ion-card>
+    
+</ion-content>

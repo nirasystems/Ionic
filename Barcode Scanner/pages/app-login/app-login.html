@@ -1,0 +1,50 @@
+<!--
+  Generated template for the AppLoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>
+            BScanner
+            <ion-fab right>
+                <button (click)="configurationButtonTapped();">
+                    <ion-icon name="settings"></ion-icon>
+                </button>
+            </ion-fab>
+        </ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="login-content">
+    <ion-card class="login-header-logo">
+        <img src="assets/imgs/logo.png" />
+    </ion-card>
+    <div class="login-form">
+        <form>
+            <ion-list class="fields-holder">
+
+                <ion-item>
+                    <ion-input [(ngModel)]="input.username" [ngModelOptions]={standalone:true} type="text" placeholder="username name"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input [(ngModel)]="input.password" type="password" [ngModelOptions]={standalone:true}
+                        placeholder="password"></ion-input>
+                </ion-item>
+
+            </ion-list>
+
+            <button (click)="signInButtonTapped();" class="login-btn"> SignIn </button>
+            <div class="login-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </form>
+    </div>
+</ion-content>

@@ -1,0 +1,109 @@
+<ion-header>  
+    <ion-navbar> 
+        <ion-title>
+            {{title}}
+            <ion-fab right>
+                <button (click)="logoutButtonTapped();">
+                    <ion-icon name="log-out"></ion-icon>
+                </button>
+            </ion-fab>
+        </ion-title>
+    </ion-navbar>
+    <div class="scan-card">
+        <ion-card> 
+            <ion-item>
+                <!-- <h2 >Scan your card</h2> -->
+                <div [ngClass]="isSignInTabSelected ? 'scan-your-card-green' : 'scan-your-card-red'">{{scanCardViewModel.title}}</div>
+            </ion-item> 
+            
+            <ion-card-content> 
+                <div class="list"> 
+                    <div class="item item-input-inset">
+                        <label class="item-input-wrapper">
+                            <input type="text" [(ngModel)]="request.memberId" placeholder="">
+                        </label>
+                        <button class="button button-small" (click)="searchButtonTapped();">
+                            <ion-icon name="search"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+ 
+                <div class="list"> 
+                    <button ion-button icon-end [ngClass]="isSignInTabSelected ? 'green-btn' : 'red-btn'"  (click)="scanButtonTapped();">
+                        Scan Barcode
+                        <ion-icon name="barcode"></ion-icon>
+                    </button> 
+                </div>
+
+            </ion-card-content>
+
+        </ion-card>
+    </div>
+</ion-header>
+
+<ion-content class="">  
+    
+    <ion-card [hidden] = "signInCardViewModel.isHidden"> 
+        <ion-card-content class="sign-in-card">  
+            <div class="red-card"> {{signInCardViewModel.memberName}} <br> 
+                <span> {{signInCardViewModel.address}} </span> 
+            </div> 
+            
+            <div class="green-card"> {{signInCardViewModel.picketLine}} </div> 
+            
+            <div class="control-btns"> 
+                <button class="button" (click)="cancelButtonTapped();">Cancel</button> 
+                <button class="button" (click)= "signInButtonTapped();">Sign-In</button> 
+            </div>  
+        </ion-card-content>  
+    </ion-card> 
+
+    <ion-card [hidden] = "signOutCardViewModel.isHidden"> 
+        <ion-card-content class="sign-in-card">  
+            <div class="red-card"> {{signOutCardViewModel.memberName}} <br> 
+                <span> {{signOutCardViewModel.address}} </span> 
+            </div> 
+            
+            <div class="green-card"> {{signOutCardViewModel.picketLine}} </div> 
+            <!-- <div class="stop-watch"> {{signOutCardViewModel.countDownString}} </div>  -->
+            <div class="control-btns"> 
+                <button class="button" (click)="cancelButtonTapped();">Cancel</button> 
+                <button class="button" (click)= "signOutButtonTapped();">Sign-Out</button> 
+            </div>  
+            <div class="stop-watch"> {{signOutCardViewModel.countDownString}} </div> 
+        </ion-card-content>  
+    </ion-card> 
+ 
+    <ion-card [hidden] = "alreadySignInCardViewModel.isHidden"> 
+            <ion-card-content class="sign-in-card"> 
+                <div [ngClass]="isSignInTabSelected ? 'red-card-with-txt' : 'green-card-with-txt'"> {{alreadySignInCardViewModel.title}} <br> 
+                    <span class="text-msg"> {{alreadySignInCardViewModel.message}} </span> 
+                </div> 
+            </ion-card-content> 
+        </ion-card> 
+
+        <ion-card [hidden] = "notyetSignedInViewModel.isHidden"> 
+            <ion-card-content class="sign-in-card"> 
+                <div class='red-card-with-txt'> {{notyetSignedInViewModel.title}} <br> 
+                    <!-- <span class="text-msg"> {{alreadySignInCardViewModel.message}} </span>  -->
+                </div> 
+            </ion-card-content> 
+        </ion-card> 
+
+<ion-card *ngFor="let item of bottomViewModelList; index as i" [attr.data-index]="i" (click)="listItemTapped(i);"> 
+    
+    <ion-card-content [ngClass]="isSignInTabSelected ? 'last-sign-in' : 'last-sign-out'"> 
+        {{item.message}} 
+    </ion-card-content> 
+</ion-card>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <div class="button-bar">
+            <button class="button" [disabled]="isSignInTabSelected" (click)="signInTabTapped();">SignIn LLegar</button>
+            <button class="button" [disabled]="!isSignInTabSelected" (click)="signOutTabTapped();">SignOut Salir</button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

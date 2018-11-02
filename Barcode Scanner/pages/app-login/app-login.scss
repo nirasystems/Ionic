@@ -1,0 +1,90 @@
+
+ion-card.login-header-logo {
+    width: 100px;
+    margin: auto;
+}
+.login-content{
+    padding: 0px 15px 0px 15px;
+}
+.login-content .scroll-content{
+    position: fixed;
+    top:50%;
+    transform: translateY(-65%); /*50%*/
+    overflow: initial;
+}
+.login-content form ion-item .item-inner{
+    padding: 0 !important;
+}
+.fields-holder {
+    border: 0 !important;
+    margin-bottom: 0px;
+    padding-top: 20px;
+}
+
+.fields-holder ion-item .text-input {
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f6f9fc;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "SF-Pro-Display";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.59px;
+    margin: auto;
+    width:calc(100% - 30px);
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.fields-holder .item-input {
+    background-color: transparent;
+    padding-left: 0;
+}
+
+.fields-holder .item-block:first-child {
+    border: 0;
+}
+
+.login-btn {
+    height: 50px;
+    box-shadow: none;
+    border-radius: 3px;
+    background-color: #ffffff !important;
+    color: #8ee269;
+    border:1px solid;
+    font-family: Helvetica;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.configuration-btn {
+    height: 50px;
+    border-radius: 3px;
+    background-color: #ffffff !important;
+    color: #d183fd;
+    border: 1px solid;
+    font-family: Helvetica;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.fields-holder .item-input:last-child,
+.login-form .item-block .item-inner {
+    border-bottom: 0;
+    box-shadow: none !important;
+}
+.login-description{
+    font-size: 13px;
+    color: #cccccc;
+    margin-left: 15px;
+    margin-right: 15px;
+}
